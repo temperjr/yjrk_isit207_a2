@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2 AZoom</title>
+    <link rel="stylesheet" href="A2_Main_CSS.css">
+</head>
+<body>
+    <script src="A2_Global_Script.js"></script>
+
+    <!-- HEADER -->
+    <header>
+        <a class="header-logo" href="index.html">
+            <img src="Other_Images/az_logo.png" alt="">
+        </a>
+        <div class="header-nav">
+            <a href="A2_Rent_Page.html">Rent A Car</a>
+            <a href="A2_Collection_Page.html">Our Collection</a>
+            <a href="A2_AboutUs.html">About Us</a>
+        </div>
+        <div class="user-controls">
+            <!-- This span will show the username -->
+            <a href="A2_ProfilePage.html"><span id="welcomeMessage" class="hidden"></span></a>
+            <button id="authBtn" class="auth-btn">Login</button>
+        </div>
+    </header>
+
+    <!-- The Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="login-form-container">
+                <h2>Log In</h2>
+                <form id="loginForm">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <div class="login-form-button-container">
+                        <button type="submit">Login</button>
+                        <p>Don't have an existing account?</p>
+                        <button id="signupbtn">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <section class="about-us-info">
+        <h1>ABOUT AZOOM</h1>
+        <div>
+            <p>At <strong>AZoom</strong> Rentals, we believe that exploring the world shouldn’t come at the expense of the planet. That’s why we’re dedicated to offering a modern, fully electric car rental experience that’s both sustainable and effortless. Our fleet features the latest electric vehicles—from sleek city compacts to spacious SUVs—ensuring a smooth, quiet, and zero-emission ride wherever your journey takes you. Every detail of our service is designed with sustainability in mind, from our renewable-powered charging stations to our paperless booking system.</p>
+            <p>More than just a rental company, EcoDrive is part of a movement toward a cleaner, greener future. We’re passionate about helping travellers make environmentally conscious choices without sacrificing comfort, performance, or style. Whether you’re commuting for business, taking a weekend getaway, or exploring a new city, we make it easy to drive electric and reduce your carbon footprint. Join us in driving change—one electric mile at a time.</p>
+        </div>
+    </section>
+
+    <section class="AU-location">
+        <h1>OUR LOCATIONS</h1>
+        <h2>Changi Terminal 2</h2>
+        <div class="gmap-location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16698.277382743443!2d103.98505300745191!3d1.3552084469471415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da3c8ddacdb5d1%3A0x25060171cbc43cf1!2sChangi%20Airport%20Terminal%202!5e0!3m2!1sen!2ssg!4v1761912204798!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p>Contact: +65 6789 1234</p>
+        <h2>28 Sin Ming Lane</h2>
+        <div class="gmap-location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15954.777395098956!2d103.82386713665439!3d1.360031379828939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da172611d85fad%3A0xbe30e3c262e12bc!2sSingapore%20573972!5e0!3m2!1sen!2ssg!4v1761912660528!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p>Contact: +65 6111 1234</p>
+    </section>
+    
+    
+    <!-- FOOTER  -->
+    <section class="footer">
+        <p>@ 2025 AZoom Pte. Ltd.</p>
+        <nav>
+            <a href="A2_Rent_Page.html">Rent-A-Car</a>
+            <a href="A2_AboutUs.html">About Us</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+        </nav>
+        <div>
+            <img src="Other_Images/tiktok_logo.png" alt="tiktok icon">
+            <img src="Other_Images/insta_logo.png" alt="instagram icon">
+            <img src="Other_Images/facebook_logo.png" alt="facebook icon">
+        </div>
+    </section>
+
+</body>
+</html>

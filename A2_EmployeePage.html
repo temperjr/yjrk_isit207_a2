@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="A2_Main_CSS.css">
+</head>
+<body>
+    <script src="A2_Global_Script.js"></script>
+    <script src="A2_Employee_Script.js"></script>
+
+    <!-- ALERTS -->
+    <div id="custom-alert" class="custom-alert-box">
+        <div class="custom-alert-content">
+            <span class="custom-alert-close">&times;</span>
+            <p id="custom-alert-message"></p>
+        </div>
+    </div>
+
+    <!-- HEADER SECTION -->
+    <header>
+        <a class="header-logo" href="index.html">
+            <img src="Other_Images/az_logo.png" alt="">
+        </a>
+        <div class="header-nav">
+            <a href="A2_EmployeePage.html">Dashboard</a>
+        </div>
+        <div class="user-controls">
+            <span id="welcomeMessage" class="hidden"></span>
+            <button id="authBtn" class="auth-btn">Login</button>
+        </div>
+    </header>
+
+    <!-- The Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="login-form-container">
+                <h2>Log In</h2>
+                <form id="loginForm">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <div class="login-form-button-container">
+                        <button type="submit">Login</button>
+                        <p>Don't have an existing account?</p>
+                        <button id="signupbtn" type="button">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- EMPLOYEE PAGE CONTENT -->
+    <main class="container">
+        <!-- EMPLOYEE PROFILE -->
+        <section class="profile-details card">
+            <h2>Employee Profile</h2>
+            <div>
+                <div class="user-profile-image">
+                    <img src="Other_Images/emp_profile_photo.jpg" alt="">
+                </div>
+                <div class="detail-group-details">
+                    <div class="detail-group">
+                        <p class="detail-group-title">Employee ID:</p>
+                        <p id="empId"></p>
+                    </div>
+                    <div class="detail-group">
+                        <p class="detail-group-title">Name:</p>
+                        <p id="empName">Employee Name</p>
+                    </div>
+                    <div class="detail-group">
+                        <p class="detail-group-title">Department:</p>
+                        <p>Vehicle Operations</p>
+                    </div>
+                    <div class="detail-group">
+                        <p class="detail-group-title">Email:</p>
+                        <p id="empEmail">employee@azoom.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOOKINGS BY LOCATION -->
+        <section class="current-bookings card">
+            <h2>Bookings Management</h2>
+            
+            <div class="location-filter">
+                <label for="locationSelect"><strong>Select Location:</strong></label>
+                <select id="locationSelect" class="location-select">
+                    <option value="">-- Select a Location --</option>
+                    <option value="Changi Airport T2 Arrival Hall">Changi Airport T2 Arrival Hall</option>
+                    <option value="Changi Airport T3 Arrival Hall">Changi Airport T3 Arrival Hall</option>
+                    <option value="Midview City, 28 Sin Ming Lane, #01-138/139 573972">Midview City, 28 Sin Ming Lane</option>
+                </select>
+            </div>
+
+            <div id="bookingsContainer" style="margin-top: 30px;">
+                <p class="no-selection-message">Please select a location to view bookings</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <section class="footer">
+        <p>@ 2025 AZoom Pte. Ltd.</p>
+        <nav>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+        </nav>
+        <div>
+            <img src="Other_Images/tiktok_logo.png" alt="tiktok icon">
+            <img src="Other_Images/insta_logo.png" alt="instagram icon">
+            <img src="Other_Images/facebook_logo.png" alt="facebook icon">
+        </div>
+    </section>
+
+</body>
+</html>

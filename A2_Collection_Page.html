@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2 AZoom</title>
+    <link rel="stylesheet" href="A2_Main_CSS.css">
+</head>
+<body>
+    <script src="A2_Global_Script.js"></script>
+
+    <!-- HEADER -->
+    <header>
+        <a class="header-logo" href="index.html">
+            <img src="Other_Images/az_logo.png" alt="">
+        </a>
+        <div class="header-nav">
+            <a href="A2_Rent_Page.html">Rent A Car</a>
+            <a href="A2_Collection_Page.html">Our Collection</a>
+            <a href="A2_AboutUs.html">About Us</a>
+        </div>
+        <div class="user-controls">
+            <!-- This span will show the username -->
+            <a href="A2_ProfilePage.html"><span id="welcomeMessage" class="hidden"></span></a>
+            <button id="authBtn" class="auth-btn">Login</button>
+        </div>
+    </header>
+
+    <!-- The Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="login-form-container">
+                <h2>Log In</h2>
+                <form id="loginForm">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <div class="login-form-button-container">
+                        <button type="submit">Login</button>
+                        <p>Don't have an existing account?</p>
+                        <button id="signupbtn">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE CONTENTS -->
+    <section class="collections-page-main">
+        <div class="c-page-filters">
+            <h1>Our Collection</h1>
+            <h2>Filter by</h2>
+            <hr>
+            <h3>Fuel Type</h3>
+            <div class="cpage-filter">
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="Diesel"> Diesel</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="Petrol"> Petrol</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="Electric"> Electric</div>
+            </div>
+            <hr>
+            <h3>Vehicle Type</h3>
+            <div class="cpage-filter">
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="Van"> Van</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="SUV"> SUV</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="Sedan"> Sedan</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="MPV"> MPV</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="Station Wagon"> Station Wagon</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="Hatchback"> Hatchback</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="Sports"> Sports</div>
+            </div>
+            <hr>
+            <h3>Brand</h3>
+            <div class="cpage-filter">
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="Hyundai"> Hyundai</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="Toyota"> Toyota</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="Polestar"> Polestar</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="Mazda"> Mazda</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="Suzuki"> Suzuki</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="BYD"> BYD</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="Nissan"> Nissan</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="Mitsubishi"> Mitsubishi</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="BMW"> BMW</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="Porche"> Porche</div>
+            </div>
+            <hr>
+            <h3>Seater</h3>
+            <div class="cpage-filter">
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="2-seater"> 2 Seater</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="5-seater"> 5 Seater</div>
+                <div><input type="checkbox" class="c-page-filter-checkbox" value="7-seater"> <span>7+ Seater</span></div>
+            </div>
+        </div>
+
+        <div class="c-page-results">
+            <form id="searchForm" role="search">
+                <input type="search" id="searchInput" name="q" placeholder="Search" aria-div="Search through cars content">
+                <!-- <button type="submit">Search</button> -->
+            </form>
+            <div class="product-results">
+                <div class="vehicle-card" data-tags="Suzuki, Petrol, SUV, 5-Seater, 4-Door">
+                    <div class="vehicle-card-image">
+                        <img src="Car_Images/Suzuki_Ignis.png" alt="">
+                    </div>
+                    <div class="veh-card-content">
+                        <h2>Suzuku Ignis</h2>
+                        <div class="vehicle-card-features">
+                            <p>Petrol</p>
+                            <p>Standard</p>
+                            <p>SUV</p>
+                            <p>5-seater</p>
+                            <p>4-Door</p>
+                        </div>
+                        <div class="veh-card-cta">
+                            <button onclick="window.location.href='A2_Rent_Page.html'">Check Availability</button>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="vehicle-card" data-tags="BYD, Electric, SUV, 5-Seater, 4-Door">
+                    <div class="vehicle-card-image">
+                        <img src="Car_Images/BYD_Atto_3.png" alt="byd atto3" width="500" height="600">
+                    </div>
+                    <div class="veh-card-content">
+                        <h2>BYD Atto 3</h2>
+                        <div class="vehicle-card-features">
+                            <p>Electric</p>
+                            <p>Select Electric</p>
+                            <p>SUV</p>
+                            <p>5-seater</p>
+                            <p>4-Door</p>
+                        </div>
+                        <div class="veh-card-cta">
+                            <button onclick="window.location.href='A2_Rent_Page.html'">Check Availability</button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="vehicle-card" data-tags="Mazda, Petrol, SUV, 5-Seater, 4-Door">
+                    <div class="vehicle-card-image">
+                        <img src="Car_Images/Mazda_3.png" alt="byd atto3" width="500" height="600">
+                    </div>
+                    <div class="veh-card-content">
+                        <h2>Mazda 3</h2>
+                        <div class="vehicle-card-features">
+                            <p>Petrol</p>
+                            <p>Select</p>
+                            <p>SUV</p>
+                            <p>5-seater</p>
+                            <p>4-Door</p>
+                        </div>
+                        <div class="veh-card-cta">
+                            <button onclick="window.location.href='A2_Rent_Page.html'">Check Availability</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vehicle-card" data-tags="Porche,Petrol,Sports,2-Seater,2-Door">
+                    <div class="vehicle-card-image">
+                        <img src="Car_Images/Porche_911_Carrera.png" alt="">
+                    </div>
+                    <div class="veh-card-content">
+                        <h2>Porche 911</h2>
+                        <div class="vehicle-card-features">
+                            <p>Petrol</p>
+                            <p>Carrera</p>
+                            <p>Sports</p>
+                            <p>2-seater</p>
+                            <p>2-Door</p>
+                        </div>
+                        <div class="veh-card-cta">
+                            <button style="background-color: #A47D2E; color: white;" onclick="window.location.href='A2_Rent_Page.html'">Check Availability</button>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="vehicle-card" data-tags="Polestar,Electric,Sedan,5-Seater,4-Door,Eco">
+                    <div class="vehicle-card-image">
+                        <img src="Car_Images/Polestar_2.png" alt="">
+                    </div>
+                    <div class="veh-card-content">
+                        <h2>Polestar 2</h2>
+                        <div class="vehicle-card-features">
+                            <p>Electric</p>
+                            <p>Standard</p>
+                            <p>Sedan</p>
+                            <p>5-seater</p>
+                            <p>4-Door</p>
+                            <p id="e-friendly-tag">Eco</p>
+                        </div>
+                        <div class="veh-card-cta">
+                            <button onclick="window.location.href='A2_Rent_Page.html'">Check Availability</button>
+                        </div>
+                    </div> 
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+    
+
+
+    <!-- FOOTER  -->
+    <section class="footer">
+        <p>@ 2025 AZoom Pte. Ltd.</p>
+        <nav>
+            <a href="A2_Rent_Page.html">Rent-A-Car</a>
+            <a href="A2_AboutUs.html">About Us</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+        </nav>
+        <div>
+            <img src="Other_Images/tiktok_logo.png" alt="tiktok icon">
+            <img src="Other_Images/insta_logo.png" alt="instagram icon">
+            <img src="Other_Images/facebook_logo.png" alt="facebook icon">
+        </div>
+    </section>
+    
+</body>
+</html>
